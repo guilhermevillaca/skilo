@@ -12,8 +12,8 @@ class __TwigTemplate_8cdcb2e5979ae018ec1356cd5133a7b4feaa66d3eb86ff4f8b710f5a9bf
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
-            'body' => array($this, 'block_body'),
             'javascripts' => array($this, 'block_javascripts'),
+            'body' => array($this, 'block_body'),
         );
     }
 
@@ -32,19 +32,24 @@ class __TwigTemplate_8cdcb2e5979ae018ec1356cd5133a7b4feaa66d3eb86ff4f8b710f5a9bf
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 11
-        echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
+        echo "
+        ";
+        // line 12
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 17
+        echo "
+        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
+        // line 18
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
     </head>
     <body>
-        ";
-        // line 14
+    ";
+        // line 21
         $this->displayBlock('body', $context, $blocks);
-        // line 15
-        echo "        ";
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 20
-        echo "    </body>
+        // line 22
+        echo "
+</body>
 </html>
 ";
     }
@@ -59,39 +64,39 @@ class __TwigTemplate_8cdcb2e5979ae018ec1356cd5133a7b4feaa66d3eb86ff4f8b710f5a9bf
     public function block_stylesheets($context, array $blocks = array())
     {
         // line 7
-        echo "        <link href=\"";
+        echo "            <link href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/framework/css/materialize.min.css"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet\" />
-        <link href=\"";
+            <link href=\"";
         // line 8
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/framework/css/style.less"), "html", null, true);
         echo "\" type=\"text/css\" rel=\"stylesheet/less\" />
-        
+
         ";
     }
 
-    // line 14
-    public function block_body($context, array $blocks = array())
-    {
-    }
-
-    // line 15
+    // line 12
     public function block_javascripts($context, array $blocks = array())
     {
         echo "        
             <script src=\"";
-        // line 16
+        // line 13
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/framework/js/jquery-1.11.2.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 17
+        // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/framework/js/less.min.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 18
+        // line 15
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/framework/js/materialize.min.js"), "html", null, true);
         echo "\"></script>        
         ";
+    }
+
+    // line 21
+    public function block_body($context, array $blocks = array())
+    {
     }
 
     public function getTemplateName()
@@ -106,6 +111,6 @@ class __TwigTemplate_8cdcb2e5979ae018ec1356cd5133a7b4feaa66d3eb86ff4f8b710f5a9bf
 
     public function getDebugInfo()
     {
-        return array (  92 => 18,  88 => 17,  84 => 16,  79 => 15,  74 => 14,  67 => 8,  62 => 7,  59 => 6,  53 => 5,  47 => 20,  44 => 15,  42 => 14,  35 => 11,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  98 => 21,  92 => 15,  88 => 14,  84 => 13,  79 => 12,  72 => 8,  67 => 7,  64 => 6,  58 => 5,  51 => 22,  49 => 21,  43 => 18,  40 => 17,  38 => 12,  35 => 11,  33 => 6,  29 => 5,  23 => 1,);
     }
 }

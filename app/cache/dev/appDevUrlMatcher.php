@@ -126,7 +126,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // frontend_front_home_index
-        if ($pathinfo === '/index') {
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'frontend_front_home_index');
+            }
+
             return array (  '_controller' => 'Frontend\\FrontBundle\\Controller\\HomeController::indexAction',  '_route' => 'frontend_front_home_index',);
         }
 

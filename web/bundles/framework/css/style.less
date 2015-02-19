@@ -7,9 +7,29 @@
 #logo{
     position: relative;
     top: 10px;
-    left: 10px;
+    padding: 10px;
+}
+.buttons-header{
+    //position: relative;
+    margin-top: 64px;
 }
 
+nav{
+    background: transparent;
+    margin-top: 64px;
+    box-shadow: none;
+    
+    & ul>li:hover{
+        background: none;
+    }
+    & ul>li>a{
+        color:#343434;
+        &:hover{
+            background:transparent;
+            color: #26a69a;
+        }
+    }
+}
 .content{background:#f6f6f6}
 
 footer{

@@ -4,18 +4,21 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Skilo Ingressos{% endblock %}</title>
         {% block stylesheets %}
-        <link href="{{ asset('bundles/framework/css/materialize.min.css') }}" type="text/css" rel="stylesheet" />
-        <link href="{{ asset('bundles/framework/css/style.less') }}" type="text/css" rel="stylesheet/less" />
-        
+            <link href="{{ asset('bundles/framework/css/materialize.min.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('bundles/framework/css/style.less') }}" type="text/css" rel="stylesheet/less" />
+
         {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
+
         {% block javascripts %}        
             <script src="{{ asset('bundles/framework/js/jquery-1.11.2.min.js') }}"></script>
             <script src="{{ asset('bundles/framework/js/less.min.js') }}"></script>
             <script src="{{ asset('bundles/framework/js/materialize.min.js') }}"></script>        
         {% endblock %}
-    </body>
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    {% block body %}{% endblock %}
+
+</body>
 </html>
